@@ -1142,3 +1142,84 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
 }
+
+/* --------------------------------------------------
+   Profile Photo Styles — Hero Section
+-------------------------------------------------- */
+.hero-profile-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+}
+
+.hero-profile-ring {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, #00f2fe, #a855f7, #00f2fe);
+    background-size: 300% 300%;
+    animation: ringRotate 4s linear infinite;
+    box-shadow: 0 0 40px rgba(0, 242, 254, 0.4), 0 0 80px rgba(168, 85, 247, 0.2);
+}
+
+@keyframes ringRotate {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-profile-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #030712;
+}
+
+.hero-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-profile-wrapper:hover .hero-profile-img {
+    transform: scale(1.05);
+}
+
+/* --------------------------------------------------
+   Profile Photo Styles — About Section
+-------------------------------------------------- */
+.about-photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-photo-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #00f2fe 0%, #a855f7 100%);
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.35), 0 0 60px rgba(168, 85, 247, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.about-photo-frame:hover {
+    box-shadow: 0 0 50px rgba(0, 242, 254, 0.6), 0 0 90px rgba(168, 85, 247, 0.3);
+}
+
+.about-profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid #030712;
+    display: block;
+}
